@@ -31,6 +31,11 @@ joblib
 memoized-property
 termcolor
 
+
 # Data Retrieval
 kaggle
 pandas_gbq
+
+#webapp
+streamlit
+
