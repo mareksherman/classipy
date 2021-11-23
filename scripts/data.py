@@ -8,11 +8,10 @@ class Data:
         self.df = df
         self.dataset_name = dataset_name
         self.table_name = table_name
-        print("FROM DATA CLASS:", df, dataset_name, table_name)
 
     def get_dataframe(self):
         df_rows = [
-            self.get_row(self.df[col_name], self.dataset_name) for col_name in self.df
+            self.get_rows(self.df[col_name]) for col_name in self.df
         ]
 
         print("FROM DATA CLASS ROWS:", df_rows)
