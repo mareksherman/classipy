@@ -1,0 +1,363 @@
+Script started on Tue Nov 23 09:57:55 2021
+]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction]2;marek@MBP-von-Marek]1;..pe-prediction]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction[0m[27m[24m[J[01;32m➜  [36mdata-type-prediction[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[134C[🐍 classipy][147D[?1h=[?2004h[4ms[24m[4ms[4mc[24m[4ms[4mc[4mr[24m[4mr[4mi[24m[24m[32ms[24m[32mc[24m[32mr[24m[32mi[32mpt[39m[4m[32ms[4m[32mc[4m[32mr[4m[32mi[4m[32mp[4m[32mt[4m[32ms[24m[39m[?1l>[?2004l
+]2;scripts]1;scripts[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32ml[39m[32ml[32ms[39m[?1l>[?2004l
+]2;ls -G]1;lsdata-type-prediction-run data.py
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mls[39m[32ml[39m[39m [39m [32mp[39m[1m[31mp[1m[31my[0m[39m[1m[31mp[1m[31my[1m[31mt[0m[39m[1m[31mt[1m[31mh[0m[39m[1m[31mh[1m[31mo[0m[39m[0m[32mp[0m[32my[0m[32mt[0m[32mh[0m[32mo[32mn[39m [4md[24m[4md[4ma[24m[4ma[4mt[24m[4mt[4ma[24m[4ma[4m.[24m[4m.[4mp[24m[4mp[4my[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Traceback (most recent call last):
+  File "data.py", line 79, in <module>
+    file_names = read_filenames()
+  File "data.py", line 45, in read_filenames
+    encoding_det(name)
+  File "data.py", line 71, in encoding_det
+    rawdata = open(file, "r").read()
+  File "/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 207672: invalid continuation byte
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;31m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mpython[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+../raw_data/temp_datasets/movie_titles.csv
+../raw_data/temp_datasets/educational_attainment_supplementary_data.csv
+../raw_data/temp_datasets/education_expenditure_supplementary_data.csv
+../raw_data/temp_datasets/diamonds.csv
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+../raw_data/temp_datasets/school_and_country_table.csv
+../raw_data/temp_datasets/cwurData.csv
+../raw_data/temp_datasets/pokemon.csv
+../raw_data/temp_datasets/timesData.csv
+../raw_data/temp_datasets/shanghaiData.csv
+../raw_data/temp_datasets/fake_job_postings.csv
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32ml[39m[32ml[32ms[39m[?1l>[?2004l
+]2;ls -G]1;lsdata-type-prediction-run data.py
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mls[39m[?1l>[?2004l
+]2;ls -G]1;lsdata-type-prediction-run data.py
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004hls  [32mls[39m[32mp[32my[32mthon[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+country_name
+trying
+:(
+series_name
+Unnamed: 0
+trying
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+:(
+carat
+school_name
+trying
+:(
+country
+world_rank
+trying
+:(
+institution
+abilities
+trying
+:(
+against_bug
+world_rank
+trying
+:(
+university_name
+world_rank
+trying
+:(
+university_name
+job_id
+trying
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+:(
+title
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mpython[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+country_name
+trying
+except
+series_name
+Unnamed: 0
+trying
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+except
+carat
+school_name
+trying
+except
+country
+world_rank
+trying
+except
+institution
+abilities
+trying
+except
+against_bug
+world_rank
+trying
+except
+university_name
+world_rank
+trying
+except
+university_name
+job_id
+trying
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+except
+title
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mpython[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+country_name
+except
+series_name
+Unnamed: 0
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+except
+carat
+school_name
+except
+country
+world_rank
+except
+institution
+abilities
+except
+against_bug
+world_rank
+except
+university_name
+world_rank
+except
+university_name
+job_id
+/Users/marek/.pyenv/versions/classipy/lib/python3.8/site-packages/scipy/stats/morestats.py:1760: UserWarning: p-value may not be accurate for N > 5000.
+  warnings.warn("p-value may not be accurate for N > 5000.")
+except
+title
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mpython[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+country_name
+except
+series_name
+Unnamed: 0
+trying done
+carat
+school_name
+except
+country
+world_rank
+trying done
+institution
+abilities
+except
+against_bug
+world_rank
+except
+university_name
+world_rank
+except
+university_name
+job_id
+trying done
+title
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mpython[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+country_name
+except
+series_name
+Unnamed: 0
+0        26970.5
+1        26970.5
+2        26970.5
+3        26970.5
+4        26970.5
+          ...   
+53935    26970.5
+53936    26970.5
+53937    26970.5
+53938    26970.5
+53939    26970.5
+Name: mean, Length: 53940, dtype: float64
+carat
+school_name
+except
+country
+world_rank
+0      459.590909
+1      459.590909
+2      459.590909
+3      459.590909
+4      459.590909
+          ...    
+995    459.590909
+996    459.590909
+997    459.590909
+998    459.590909
+999    459.590909
+Name: mean, Length: 1000, dtype: float64
+institution
+abilities
+except
+against_bug
+world_rank
+except
+university_name
+world_rank
+except
+university_name
+job_id
+0        8940.5
+1        8940.5
+2        8940.5
+3        8940.5
+4        8940.5
+          ...  
+17875    8940.5
+17876    8940.5
+17877    8940.5
+17878    8940.5
+17879    8940.5
+Name: mean, Length: 17880, dtype: float64
+title
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32mpython[39m [4mdata.py[24m[?1l>[?2004l
+]2;python data.py]1;pythonWarning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+Warning: Your Kaggle API key is readable by other users on this system! To fix this, you can run 'chmod 600 /Users/marek/.kaggle/kaggle.json'
+country_name
+except
+series_name
+Unnamed: 0
+except
+carat
+school_name
+except
+country
+world_rank
+except
+institution
+abilities
+except
+against_bug
+world_rank
+except
+university_name
+world_rank
+except
+university_name
+job_id
+except
+title
+10
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[32ml[39m[32ml[32ms[39m[?1l>[?2004l
+]2;ls -G]1;lsdata-type-prediction-run data.py
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts]2;marek@MBP-von-Marek]1;..ction/scripts]7;file://MBP-von-Marek.localdomain/Users/marek/code/mareksherman/data-type-prediction/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31munlabeled-data-approach[34m) [33m✗[00m [K[147C[🐍 classipy][160D[?1h=[?2004h[1m[31mc[0m[39m[0m[32mc[32md[39m[?1l>[?2004l
+]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek]2;marek@MBP-von-Marek]1;~]7;file://MBP-von-Marek.localdomain/Users/marek[0m[27m[24m[J[01;32m➜  [36m~[00m [K[186C[🐍 lewagon][198D[?1h=[?2004h[32ml[39m[32ml[32ms[39m[?1l>[?2004l
+]2;ls -G]1;ls[1m[36mApplications[39;49m[0m      [1m[36mDocuments[39;49m[0m         [1m[36mLibrary[39;49m[0m           [1m[36mMusic[39;49m[0m             [1m[36mPostman[39;49m[0m           Untitled.ipynb    [1m[36meclipse[39;49m[0m           [1m[36mscikit_learn_data[39;49m[0m [1m[36mtest_fotos[39;49m[0m
+[1m[36mDesktop[39;49m[0m           [1m[36mDownloads[39;49m[0m         [1m[36mMovies[39;49m[0m            [1m[36mPictures[39;49m[0m          [1m[36mPublic[39;49m[0m            [1m[36mcode[39;49m[0m              [1m[36mnltk_data[39;49m[0m         [1m[36mseaborn-data[39;49m[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek]2;marek@MBP-von-Marek]1;~]7;file://MBP-von-Marek.localdomain/Users/marek[0m[27m[24m[J[01;32m➜  [36m~[00m [K[186C[🐍 lewagon][198D[?1h=[?2004h[4mc[24m[4mc[4mo[24m[4mc[4mo[4md[24m[24m[32mc[24m[32mo[24m[32md[32me[39m[4m[32mc[4m[32mo[4m[32md[4m[32me[4m[32m/[24m[39m[?1l>[?2004l
+]2;code/]1;code/[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code]2;marek@MBP-von-Marek]1;~/code]7;file://MBP-von-Marek.localdomain/Users/marek/code[0m[27m[24m[J[01;32m➜  [36mcode[00m [K[183C[🐍 lewagon][195D[?1h=[?2004h[32ml[39m[32ml[32ms[39m[?1l>[?2004l
+]2;ls -G]1;lsGreat_Grand_Cheat_Sheet.ipynb downlaod.py                   name_data_sets.csv            test_project.py
+[1m[36mdata_for_jup_notebook[39;49m[0m         [1m[36mmareksherman[39;49m[0m                  reddit-vaccine-myths.zip      [1m[36mtest_project_data[39;49m[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]7;file://MBP-von-Marek.localdomain/Users/marek/code]2;marek@MBP-von-Marek]1;~/code]7;file://MBP-von-Marek.localdomain/Users/marek/code[0m[27m[24m[J[01;32m➜  [36mcode[00m [K[183C[🐍 lewagon][195D[?1h=[?2004h[1m[31mj[0m[39m[1m[31mj[1m[31mu[0m[39m[0m[32mj[0m[32mu[32mpyter[39m[1m[31mj[1m[31mu[1m[31mp[1m[31my[1m[31mt[1m[31me[1m[31mr[1m[31mn[0m[39m [8D[0m[32mj[0m[32mu[0m[32mp[0m[32my[0m[32mt[0m[32me[0m[32mr[39m[0m[39m [1m[31mj[1m[31mu[1m[31mp[1m[31my[1m[31mt[1m[31me[0m[39m[39m [0m[32mj[0m[32mu[0m[32mp[0m[32my[0m[32mt[0m[32me[32mr[39m [4mn[24m[24mnotebook[?1l>[?2004l
+]2;jupyter notebook]1;jupyter[32m[I 11:30:15.658 NotebookApp](B[m [jupyter_nbextensions_configurator] enabled 0.4.1
+[32m[I 2021-11-23 11:30:15.819 LabApp](B[m JupyterLab extension loaded from /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/jupyterlab
+[32m[I 2021-11-23 11:30:15.820 LabApp](B[m JupyterLab application directory is /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/share/jupyter/lab
+[32m[I 11:30:15.823 NotebookApp](B[m Serving notebooks from local directory: /Users/marek/code
+[32m[I 11:30:15.823 NotebookApp](B[m Jupyter Notebook 6.4.4 is running at:
+[32m[I 11:30:15.823 NotebookApp](B[m http://localhost:8888/?token=80aa6b85adf924aeaeda655ca12a5016b10a7aba954e1649
+[32m[I 11:30:15.823 NotebookApp](B[m  or http://127.0.0.1:8888/?token=80aa6b85adf924aeaeda655ca12a5016b10a7aba954e1649
+[32m[I 11:30:15.823 NotebookApp](B[m Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[35m[C 11:30:15.827 NotebookApp](B[m 
+    
+    To access the notebook, open this file in a browser:
+        file:///Users/marek/Library/Jupyter/runtime/nbserver-59953-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=80aa6b85adf924aeaeda655ca12a5016b10a7aba954e1649
+     or http://127.0.0.1:8888/?token=80aa6b85adf924aeaeda655ca12a5016b10a7aba954e1649
+/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
+  return _iterencode(o, 0)
+[33m[W 11:30:19.527 NotebookApp](B[m Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.533 NotebookApp](B[m Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.553 NotebookApp](B[m Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.556 NotebookApp](B[m Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.576 NotebookApp](B[m Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.583 NotebookApp](B[m Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.605 NotebookApp](B[m Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.612 NotebookApp](B[m Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.653 NotebookApp](B[m Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.656 NotebookApp](B[m Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.784 NotebookApp](B[m Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.788 NotebookApp](B[m Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.856 NotebookApp](B[m Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.862 NotebookApp](B[m Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.881 NotebookApp](B[m Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.885 NotebookApp](B[m Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.903 NotebookApp](B[m Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.910 NotebookApp](B[m Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.929 NotebookApp](B[m Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.937 NotebookApp](B[m Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.972 NotebookApp](B[m Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:19.975 NotebookApp](B[m Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:20.098 NotebookApp](B[m Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:20.102 NotebookApp](B[m Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[33m[W 11:30:20.484 NotebookApp](B[m Notebook Great_Grand_Cheat_Sheet.ipynb is not trusted
+[33m[W 11:30:20.604 NotebookApp](B[m 404 GET /nbextensions/pydeck/extension.js?v=20211123113015 (::1) 6.810000ms referer=http://localhost:8888/notebooks/Great_Grand_Cheat_Sheet.ipynb
+Exception in callback <TaskWakeupMethWrapper object at 0x110cbee20>(<Future finis...040"\r\n\r\n'>)
+handle: <Handle <TaskWakeupMethWrapper object at 0x110cbee20>(<Future finis...040"\r\n\r\n'>)>
+Traceback (most recent call last):
+  File "/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+RuntimeError: Cannot enter into task <Task pending name='Task-2' coro=<HTTP1ServerConnection._server_request_loop() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/http1connection.py:823> wait_for=<Future finished result=b'GET /api/co...e040"\r\n\r\n'> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> while another task <Task pending name='Task-1' coro=<MultiKernelManager._async_start_kernel() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/jupyter_client/multikernelmanager.py:186>> is being executed.
+Exception in callback <TaskWakeupMethWrapper object at 0x110d46df0>(<Future finis...040"\r\n\r\n'>)
+handle: <Handle <TaskWakeupMethWrapper object at 0x110d46df0>(<Future finis...040"\r\n\r\n'>)>
+Traceback (most recent call last):
+  File "/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+RuntimeError: Cannot enter into task <Task pending name='Task-8' coro=<HTTP1ServerConnection._server_request_loop() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/http1connection.py:823> wait_for=<Future finished result=b'GET /kernel...e040"\r\n\r\n'> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> while another task <Task pending name='Task-2' coro=<KernelManager._async_start_kernel() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/jupyter_client/manager.py:336>> is being executed.
+Exception in callback <TaskWakeupMethWrapper object at 0x1116b5fa0>(<Future finis...4f1"\r\n\r\n'>)
+handle: <Handle <TaskWakeupMethWrapper object at 0x1116b5fa0>(<Future finis...4f1"\r\n\r\n'>)>
+Traceback (most recent call last):
+  File "/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+RuntimeError: Cannot enter into task <Task pending name='Task-11' coro=<HTTP1ServerConnection._server_request_loop() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/http1connection.py:823> wait_for=<Future finished result=b'GET /api/me...14f1"\r\n\r\n'> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> while another task <Task pending name='Task-1' coro=<MultiKernelManager._async_start_kernel() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/jupyter_client/multikernelmanager.py:186>> is being executed.
+Exception in callback <TaskWakeupMethWrapper object at 0x1116af2e0>(<Future finis...040"\r\n\r\n'>)
+handle: <Handle <TaskWakeupMethWrapper object at 0x1116af2e0>(<Future finis...040"\r\n\r\n'>)>
+Traceback (most recent call last):
+  File "/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+RuntimeError: Cannot enter into task <Task pending name='Task-12' coro=<HTTP1ServerConnection._server_request_loop() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/http1connection.py:823> wait_for=<Future finished result=b'GET /nbexte...e040"\r\n\r\n'> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> while another task <Task pending name='Task-83' coro=<MappingKernelManager.start_kernel() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/notebook/services/kernels/kernelmanager.py:176> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> is being executed.
+Exception in callback <TaskWakeupMethWrapper object at 0x110d46c70>(<Future finis...040"\r\n\r\n'>)
+handle: <Handle <TaskWakeupMethWrapper object at 0x110d46c70>(<Future finis...040"\r\n\r\n'>)>
+Traceback (most recent call last):
+  File "/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/asyncio/events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+RuntimeError: Cannot enter into task <Task pending name='Task-26' coro=<HTTP1ServerConnection._server_request_loop() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/http1connection.py:823> wait_for=<Future finished result=b'GET /nbexte...e040"\r\n\r\n'> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> while another task <Task pending name='Task-83' coro=<MappingKernelManager.start_kernel() running at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/notebook/services/kernels/kernelmanager.py:176> cb=[IOLoop.add_future.<locals>.<lambda>() at /Users/marek/.pyenv/versions/3.8.12/envs/lewagon/lib/python3.8/site-packages/tornado/ioloop.py:688]> is being executed.
+[32m[I 11:30:21.412 NotebookApp](B[m Kernel started: a91b4a09-ac42-451d-b6e5-7e041f7abbf5, name: python3
+[33m[W 11:30:21.455 NotebookApp](B[m 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20211123113015 (::1) 3.030000ms referer=http://localhost:8888/notebooks/Great_Grand_Cheat_Sheet.ipynb
+/Users/marek/.pyenv/versions/3.8.12/lib/python3.8/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
+  return _iterencode(o, 0)
+[32m[I 11:32:21.334 NotebookApp](B[m Saving file at /Great_Grand_Cheat_Sheet.ipynb
+[33m[W 11:32:21.337 NotebookApp](B[m Notebook Great_Grand_Cheat_Sheet.ipynb is not trusted
+[32m[I 11:34:21.330 NotebookApp](B[m Saving file at /Great_Grand_Cheat_Sheet.ipynb
+[33m[W 11:34:21.333 NotebookApp](B[m Notebook Great_Grand_Cheat_Sheet.ipynb is not trusted
+[32m[I 11:36:22.075 NotebookApp](B[m Saving file at /Great_Grand_Cheat_Sheet.ipynb
+[33m[W 11:36:22.078 NotebookApp](B[m Notebook Great_Grand_Cheat_Sheet.ipynb is not trusted
+^[[A
