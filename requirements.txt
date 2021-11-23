@@ -8,6 +8,9 @@ wheel>=0.29
 numpy
 pandas
 scikit-learn
+chardet
+glob
+scipy
 
 # tests/linter
 black
