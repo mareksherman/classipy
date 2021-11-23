@@ -9,7 +9,7 @@ numpy
 pandas
 scikit-learn
 chardet
-glob
+# glob2
 scipy
 
 # tests/linter
@@ -31,5 +31,11 @@ joblib
 memoized-property
 termcolor
 
+
+# Data Retrieval
+kaggle
+pandas_gbq
+
 #webapp
 streamlit
+
