@@ -97,14 +97,15 @@ class KaggleDataset(Data):
         count_passes = 0
         data_frames = []
         for file_name in file_names:
+            *_, table_name = file_name.rpartition('/')
+
             try:
                 df = pd.read_csv(file_name)
-                *_, table_name = file_name.rpartition('/')
                 df_calc = self.get_dataframe(
                     df, dataset_name, table_name)
             except Exception as e:
                 count_passes += 1
-                print('ERROR: SKIPPING CSV:', dataset_name, file_name, type(e))
+                print('ERROR: SKIPPING CSV:', dataset_name, table_name, type(e))
                 df_calc = pd.DataFrame()
             finally:
                 data_frames.append(df_calc)
