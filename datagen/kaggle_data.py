@@ -1,25 +1,24 @@
 from kaggle.api.kaggle_api_extended import KaggleApi
-from datagen.data import Data
 import pandas as pd
 import glob
 import os
 import shutil
 from os.path import normpath, join, abspath, dirname
 
+from datagen.data import Data
+
 
 class KaggleDataset(Data):
-    def __init__(self, n_datasets=10, max_size=25_000_000, max_rows=None) -> None:
+    def __init__(self, n_datasets=100, max_size=25_000_000, max_rows=None, n_samples=1000, output_name="kaggle_data.csv") -> None:
+        super().__init__(n_samples, max_rows, output_name)
         self.n_datasets = n_datasets
         self.dataset_names = []
-
         self.max_size = max_size
         self.max_rows = max_rows
 
         self.api = KaggleApi()
         self.api.authenticate()
 
-        self.loc_data = normpath(
-            join(dirname(dirname(__file__)), 'raw_data'))
         self.loc_temp_data = join(self.loc_data, 'temp_datasets')
 
     def get_dataset_names(self):
@@ -52,7 +51,7 @@ class KaggleDataset(Data):
         )
         self.dataset_names.to_csv(join(self.loc_data, "name_data_sets.csv"))
 
-    def download_data_sets(self):
+    def download_datasets(self):
         if not self.dataset_names:
             self.get_dataset_names()
 
@@ -71,11 +70,15 @@ class KaggleDataset(Data):
             # print('Clean-up | ', dataset_name)
             self.clean_tempfolder()
 
-        df_all = pd.concat(all_dataframes, axis=0).reset_index(drop=True)
-        df_all[:self.max_rows].to_csv(
-            join(self.loc_data, "data.csv"), index=False)
+        df_all = pd.concat(all_dataframes, axis=0).reset_index(
+            drop=True)[:self.max_rows]
+        df_all.to_csv(
+            join(self.loc_data, self.output_name), index=False)
 
-        print('DONE CREATING DATASET!')
+        print(
+            f'Completed Creating Dataset | Saved @ {join(self.loc_data,self.output_name)}')
+
+        return df_all
 
     def read_filenames(self):
         return [
@@ -96,23 +99,23 @@ class KaggleDataset(Data):
         for file_name in file_names:
             try:
                 df = pd.read_csv(file_name)
-                d = Data(df=df, dataset_name=dataset_name,
-                         table_name=file_name)
-                df_calc = d.get_dataframe()
+                *_, table_name = file_name.rpartition('/')
+                df_calc = self.get_dataframe(
+                    df, dataset_name, table_name)
             except Exception as e:
                 count_passes += 1
-                print('ERROR: SKIPPING CSV:', dataset_name, file_name, e)
+                print('ERROR: SKIPPING CSV:', dataset_name, file_name, type(e))
                 df_calc = pd.DataFrame()
-
             finally:
                 data_frames.append(df_calc)
+
+            print(f'Completed :', {dataset_name}, {table_name})
 
         return data_frames
 
 
 if __name__ == "__main__":
-    k = KaggleDataset(10)
-    k.get_data_set_names()
-    k.download_data_sets()
+    k = KaggleDataset(4)
+    k.download_datasets()
     print('DONE!!')
     pass
