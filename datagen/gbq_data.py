@@ -42,7 +42,12 @@ class GBQDataset(Data):
             print(f'Fetching :', {dataset_name}, {table_name})
 
             try:
-                query = f"SELECT * FROM {dataset_name}.{table_name}"
+                # query = f"SELECT * FROM {dataset_name}.{table_name}"
+                query = f"""
+                SELECT * FROM {dataset_name}.{table_name}
+                ORDER BY RAND()
+                LIMIT {self.n_samples}
+                """
                 df = pd.read_gbq(query, project_id=self.project_id)
                 df_calc = self.get_dataframe(
                     df, dataset_name, table_name)
