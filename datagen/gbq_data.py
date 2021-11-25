@@ -7,7 +7,7 @@ from datagen.data import Data
 
 
 class GBQDataset(Data):
-    def __init__(self, n_datasets=None, n_samples=1000, max_rows=None, output_name="gbq_data.csv", project_id=None) -> None:
+    def __init__(self, n_datasets=None, n_samples=1000, max_rows=None, output_name="gbq_data.json", project_id=None) -> None:
         super().__init__(n_samples, max_rows, output_name)
         self.n_datasets = n_datasets
         self.end_points = []
@@ -62,8 +62,8 @@ class GBQDataset(Data):
 
             df_all = pd.concat(data_frames, axis=0).reset_index(
                 drop=True)[:self.max_rows]
-            df_all.to_csv(
-                join(self.loc_data, self.output_name), index=False)
+            df_all.to_json(
+                join(self.loc_data, self.output_name))
 
         print(
             f'Completed Creating Dataset | Saved @ {join(self.loc_data,self.output_name)}')
