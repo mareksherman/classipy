@@ -7,10 +7,11 @@ from datagen.data import Data
 
 
 class GBQDataset(Data):
-    def __init__(self, n_datasets=None, n_samples=1000, max_rows=None, output_name="gbq_data.csv") -> None:
+    def __init__(self, n_datasets=None, n_samples=1000, max_rows=None, output_name="gbq_data.csv", project_id=None) -> None:
         super().__init__(n_samples, max_rows, output_name)
         self.n_datasets = n_datasets
         self.end_points = []
+        self.project_id = project_id
         pass
 
     def get_queryendpoints(self):
@@ -36,24 +37,33 @@ class GBQDataset(Data):
         data_frames = []
         # TODO: REMOVE LIMIT AFTER TESTING
         for endpoint in self.end_points[:self.n_datasets]:
+
             api, dataset_name, table_name = endpoint.values()
-            query = f"SELECT * FROM {dataset_name}.{table_name}"
-            df = pd.read_gbq(query)
+            print(f'Fetching :', {dataset_name}, {table_name})
+
             try:
+                # query = f"SELECT * FROM {dataset_name}.{table_name}"
+                query = f"""
+                SELECT * FROM {dataset_name}.{table_name}
+                ORDER BY RAND()
+                LIMIT {self.n_samples}
+                """
+                df = pd.read_gbq(query, project_id=self.project_id)
                 df_calc = self.get_dataframe(
                     df, dataset_name, table_name)
             except Exception as e:
+                print(
+                    f'ERROR: {dataset_name}, {table_name}, {type(e)} \n SKIPPING')
                 df_calc = pd.DataFrame()
+            else:
+                print(f'Completed :', {dataset_name}, {table_name})
             finally:
                 data_frames.append(df_calc)
 
-            print(f'Completed :', {dataset_name}, {table_name})
-
-        df_all = pd.concat(data_frames, axis=0).reset_index(
-            drop=True)[:self.max_rows]
-
-        df_all.to_csv(
-            join(self.loc_data, self.output_name), index=False)
+            df_all = pd.concat(data_frames, axis=0).reset_index(
+                drop=True)[:self.max_rows]
+            df_all.to_csv(
+                join(self.loc_data, self.output_name), index=False)
 
         print(
             f'Completed Creating Dataset | Saved @ {join(self.loc_data,self.output_name)}')

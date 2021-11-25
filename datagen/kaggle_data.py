@@ -9,10 +9,10 @@ from datagen.data import Data
 
 
 class KaggleDataset(Data):
-    def __init__(self, n_datasets=100, max_size=25_000_000, max_rows=None, n_samples=1000, output_name="kaggle_data.csv") -> None:
+    def __init__(self, n_datasets=100, max_size=25_000_000, max_rows=None, n_samples=1000, output_name="kaggle_data.csv", datset_names=None) -> None:
         super().__init__(n_samples, max_rows, output_name)
         self.n_datasets = n_datasets
-        self.dataset_names = []
+        self.dataset_names = datset_names
         self.max_size = max_size
         self.max_rows = max_rows
 
@@ -52,7 +52,7 @@ class KaggleDataset(Data):
         self.dataset_names.to_csv(join(self.loc_data, "name_data_sets.csv"))
 
     def download_datasets(self):
-        if not self.dataset_names:
+        if not isinstance(self.dataset_names, pd.DataFrame):
             self.get_dataset_names()
 
         all_dataframes = []
