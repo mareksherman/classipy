@@ -12,7 +12,6 @@ bigquery-public-data.fda_drug:drug_enforcement
 bigquery-public-data.geo_us_boundaries:adjacent_counties
 bigquery-public-data.geo_us_boundaries:states
 bigquery-public-data.google_ads:geotargets
-bigquery-public-data.hacker_news:comments
 bigquery-public-data.london_bicycles:cycle_stations
 bigquery-public-data.london_fire_brigade:fire_brigade_service_calls
 bigquery-public-data.nasa_wildfire:past_week
@@ -25,3 +24,4 @@ bigquery-public-data.san_francisco:bikeshare_trips
 bigquery-public-data.san_francisco_trees:street_trees
 bigquery-public-data.world_bank_global_population:population_by_country
 bigquery-public-data.world_bank_health_population:country_summary
+bigquery-public-data.hacker_news:comments

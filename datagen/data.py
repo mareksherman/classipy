@@ -36,6 +36,7 @@ class Data:
             "column_values": lambda x: [", ".join(map(str, col.tolist()))],
             "column_values_unique": lambda x: x.unique(),
             "nunique_values": lambda x: x.nunique(),
+            'n_values': lambda x: x.shape[0],
             "mean": lambda x: x.mean(),
             "std": lambda x: x.std(),
             "median": lambda x: x.median(),
