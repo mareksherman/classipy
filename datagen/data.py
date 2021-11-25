@@ -13,7 +13,7 @@ class Data:
             join(dirname(dirname(__file__)), 'raw_data'))
 
     def get_dataframe(self, df, dataset_name, table_name):
-        print(f'Getting DataFrame: {dataset_name} {table_name}')
+        print(f'Processing DataFrame: {dataset_name} {table_name}')
         df_rows = [
             self.get_row(df[col_name], dataset_name, table_name) for col_name in df
         ]
