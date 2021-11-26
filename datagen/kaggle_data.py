@@ -9,7 +9,7 @@ from datagen.data import Data
 
 
 class KaggleDataset(Data):
-    def __init__(self, n_datasets=100, max_size=25_000_000, max_rows=None, n_samples=1000, output_name="kaggle_data.csv", datset_names=None) -> None:
+    def __init__(self, n_datasets=100, max_size=25_000_000, max_rows=None, n_samples=1000, output_name="kaggle_data.json", datset_names=None) -> None:
         super().__init__(n_samples, max_rows, output_name)
         self.n_datasets = n_datasets
         self.dataset_names = datset_names
@@ -72,8 +72,7 @@ class KaggleDataset(Data):
 
         df_all = pd.concat(all_dataframes, axis=0).reset_index(
             drop=True)[:self.max_rows]
-        df_all.to_csv(
-            join(self.loc_data, self.output_name), index=False)
+        df_all.to_json(join(self.loc_data, self.output_name))
 
         print(
             f'Completed Creating Dataset | Saved @ {join(self.loc_data,self.output_name)}')
@@ -116,7 +115,7 @@ class KaggleDataset(Data):
 
 
 if __name__ == "__main__":
-    k = KaggleDataset(4)
+    k = KaggleDataset(3)
     k.download_datasets()
     print('DONE!!')
     pass
