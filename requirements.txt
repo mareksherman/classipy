@@ -9,6 +9,8 @@ numpy
 pandas
 scikit-learn
 chardet
+imbalanced-learn
+
 # glob2
 scipy
 
@@ -38,4 +40,3 @@ pandas_gbq
 
 #webapp
 streamlit
-
