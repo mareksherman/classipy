@@ -1,6 +1,14 @@
 import streamlit as st
 import pandas as pd
 import time
+from classipyapp.app_functions import display_transformation_options
+
+st.set_page_config(
+    page_title="Quick reference",  # => Quick reference - Streamlit
+    page_icon="🎲",
+    layout="centered",  # wide,centered
+    initial_sidebar_state="auto")  # collapsed
+
 
 st.markdown('''
 ### Classipy: Coming Soon 🔜
@@ -34,26 +42,12 @@ else:
     st.write('Please select an action')
 
 
-#Temporarily displays a message while executing a block of code
-def processing_feedback(status):
-    '''Displays message while code executes'''
-    with st.spinner('Wait for it...'):
-        status = 'Done'
-    st.success('Done!')
-    pass
 
-#Allow user to download output as csv:
-# 1. Convert df to csv
-@st.cache
-def convert_df(transformed_df):
-    # IMPORTANT: Cache the conversion to prevent computation on every rerun
-    transformed_csv = transformed_df.to_csv().encode('utf-8')
-    return transformed_csv
+column_names = ['Column1','Column2']
+categorical_transformation =  ['OneHotEncoder','LabelEncoder']
+numerical_transformation = ['StandardScaling','MinMaxValue']
 
-#2. Create Download button
-def download_button(transformed_csv):
-    st.download_button(
-    label="Download data as CSV",
-    data=convert_df(transformed_csv),
-    file_name='transformed_df.csv',
-    mime='text/csv',)
+display_transformation_options(column_names, 'Categorical',
+                               categorical_transformation)
+display_transformation_options(column_names, 'Numerical',
+                               numerical_transformation)
