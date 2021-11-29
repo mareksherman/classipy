@@ -95,7 +95,8 @@ class Heuristic ():
             df,df_text = self.check_text(df)
             df,df_int_float = self.check_int_float(df)
             df.heuristic_label = 'other'
-            return df_bin.append([df_date,df_cat_multi,df_text,df_int_float,df],ignore_index=True)
+            df = df_bin.append([df_date,df_cat_multi,df_text,df_int_float,df],ignore_index=True)
+            return df.heuristic_label
 
 if __name__ == '__main__':
     df = pd.read_csv('../raw_data/kaggle_data_merged_with_labels.csv')
