@@ -64,7 +64,7 @@ class DataFrameTransformer(TransformerMixin, BaseEstimator):
 
             # THIS PUTS ZEROS INSTEAD OF NANS
             finally:
-                if val is None or val is np.nan:
+                if val is None or val is np.nan or val is np.inf:
                     val = 0
             features[col_name] = [val]
 

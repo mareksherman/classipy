@@ -1,7 +1,7 @@
 from os.path import isfile
 from os.path import dirname
 
-from .base_transformer import DataFrameTransformer
+from .transformers.base_transformer import DataFrameTransformer
 
 version_file = '{}/version.txt'.format(dirname(__file__))
 
