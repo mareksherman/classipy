@@ -2,6 +2,7 @@ import pandas as pd
 import re
 import math
 import ast
+import numpy as np
 
 class Heuristic ():
 
@@ -10,6 +11,7 @@ class Heuristic ():
 
     
     def check_cat_binary(self,df):
+        df['heuristic_label'] = np.nan
         for index,row in df.iterrows():
             if row['n_unique_values'] == 2:
                 list_n_uniques = ast.literal_eval(row.column_values_unique)
