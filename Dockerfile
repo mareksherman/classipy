@@ -1,7 +1,7 @@
 FROM python:3.8.6-buster
 
 COPY api /api
-COPY data-type-prediction /data-type-prediction
+COPY classipy /classipy
 #COPY model.joblib /model.joblib
 COPY requirements.txt /requirements.txt
 
