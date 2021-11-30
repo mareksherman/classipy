@@ -5,10 +5,10 @@ install_requirements:
 	@pip install -r requirements.txt
 
 check_code:
-	@flake8 scripts/* data-type-prediction/*.py
+	@flake8 scripts/* classipy/*.py
 
 black:
-	@black scripts/* data-type-prediction/*.py
+	@black scripts/* classipy/*.py
 
 test:
 	@coverage run -m pytest tests/*.py
@@ -22,8 +22,8 @@ clean:
 	@rm -f .coverage
 	@rm -fr */__pycache__ */*.pyc __pycache__
 	@rm -fr build dist
-	@rm -fr data-type-prediction-*.dist-info
-	@rm -fr data-type-prediction.egg-info
+	@rm -fr classipy-*.dist-info
+	@rm -fr classipy.egg-info
 
 install:
 	@pip install . -U
