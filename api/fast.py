@@ -1,8 +1,11 @@
 from fastapi import FastAPI
+from fastapi import Request
 from fastapi.middleware.cors import CORSMiddleware
 
 import pandas as pd
 import joblib
+from api.data-type-prediction.heuristic import test_dataset_heuristic
+
 
 app = FastAPI()
 
@@ -17,12 +20,10 @@ app.add_middleware(
 def index():
     return dict(greeting="hello")
 
-@app.get("/summary_predict")
-def summary_predict(user_data):
-
+@app.post("/summary_predict")
+async def summary_predict(info: Request):
     #Dataframe from streamlit:
-    #X = pd.DataFrame()
-    X = user_data
+    user_data = await info.json()
 
     #Get pipeline
     #pipeline = joblib.load('')
@@ -30,8 +31,8 @@ def summary_predict(user_data):
     #Predict columns
     #results = pipeline.predict(X)
 
-    return user_data
-
+    #return to streamlit
+    return {"status": "SUCCESS", "data": user_data}
 
 @app.get("/transform")
 def transform():
