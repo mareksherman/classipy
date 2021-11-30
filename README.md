@@ -1,5 +1,5 @@
 # Data analysis
-- Document here the project: data-type-prediction
+- Document here the project: classipy
 - Description: Project Description
 - Data Source:
 - Type of analysis:
@@ -22,15 +22,15 @@ Unittest test:
 make clean install test
 ```
 
-Check for data-type-prediction in gitlab.com/{group}.
+Check for classipy in gitlab.com/{group}.
 If your project is not set please add it:
 
-- Create a new project on `gitlab.com/{group}/data-type-prediction`
+- Create a new project on `gitlab.com/{group}/classipy`
 - Then populate it:
 
 ```bash
-##   e.g. if group is "{group}" and project_name is "data-type-prediction"
-git remote add origin git@github.com:{group}/data-type-prediction.git
+##   e.g. if group is "{group}" and project_name is "classipy"
+git remote add origin git@github.com:{group}/classipy.git
 git push -u origin master
 git push -u origin --tags
 ```
@@ -41,12 +41,12 @@ Functionnal test with a script:
 cd
 mkdir tmp
 cd tmp
-data-type-prediction-run
+classipy-run
 ```
 
 # Install
 
-Go to `https://github.com/{group}/data-type-prediction` to see the project, manage issues,
+Go to `https://github.com/{group}/classipy` to see the project, manage issues,
 setup you ssh public key, ...
 
 Create a python3 virtualenv and activate it:
@@ -59,8 +59,8 @@ deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
 Clone the project and install it:
 
 ```bash
-git clone git@github.com:{group}/data-type-prediction.git
-cd data-type-prediction
+git clone git@github.com:{group}/classipy.git
+cd classipy
 pip install -r requirements.txt
 make clean install test                # install and test
 ```
@@ -70,5 +70,5 @@ Functionnal test with a script:
 cd
 mkdir tmp
 cd tmp
-data-type-prediction-run
+classipy-run
 ```
