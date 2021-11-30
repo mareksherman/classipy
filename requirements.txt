@@ -42,6 +42,3 @@ pandas_gbq
 
 #webapp
 streamlit
-
-#heuristics
-ast
