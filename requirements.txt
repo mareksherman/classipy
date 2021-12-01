@@ -35,14 +35,12 @@ joblib
 memoized-property
 termcolor
 
-
 # Data Retrieval
 kaggle
 pandas_gbq
 
 #webapp
 streamlit
-
 
 # models
 lightgbm==2.2.3
