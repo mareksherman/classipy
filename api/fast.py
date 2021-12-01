@@ -24,7 +24,6 @@ async def summary_predict(info: Request):
     #Dataframe from streamlit:
     user_data_json = await info.json()
     user_data_df = pd.DataFrame(user_data_json)
-    print(user_data_df)
     #Get heusristic prediction
     heuristic_model = Heuristic()
     heuristic_pred = heuristic_model.test_dataset_heuristic(user_data_df)
