@@ -1,8 +1,10 @@
 from fastapi import FastAPI
+from fastapi import Request
 from fastapi.middleware.cors import CORSMiddleware
 
 import pandas as pd
 import joblib
+from classipy.models.heuristic import Heuristic
 
 app = FastAPI()
 
@@ -17,21 +19,30 @@ app.add_middleware(
 def index():
     return dict(greeting="hello")
 
-@app.get("/summary_predict")
-def summary_predict(user_data):
-
+@app.post("/summary_predict")
+async def summary_predict(info: Request):
     #Dataframe from streamlit:
-    #X = pd.DataFrame()
-    X = user_data
+    user_data_json = await info.json()
+    user_data_df = pd.DataFrame(user_data_json)
+    #Get heusristic prediction
+    heuristic_model = Heuristic()
+    heuristic_pred = heuristic_model.test_dataset_heuristic(user_data_df)
+    #heuristic_pred = heuristic_pred.to_frame()
+    heuristic_pred = pd.DataFrame.to_json(heuristic_pred)
+    #heuristic_pred = pd.DataFrame.to_json(user_data_df)
 
-    #Get pipeline
-    #pipeline = joblib.load('')
 
-    #Predict columns
-    #results = pipeline.predict(X)
+    #Get model prediction pipeline
+    #pipeline = joblib.load('models.model')
+    #Predict columns with models
+    #model_pred = pipeline.predict(X)
 
-    return user_data
+    #Build result data frame by evaluating which pred is better (heuristic or model)
+    #result_df =
+    #for every row in heuristiv_pred and model_pred
 
+
+    return heuristic_pred
 
 @app.get("/transform")
 def transform():
