@@ -5,6 +5,8 @@ import joblib
 
 from classipy import CustomLabelEncoder
 
+from classipy.models.heuristic import Heuristic
+
 
 class CustomVotingClassifier:
     def __init__(self) -> None:
@@ -21,6 +23,9 @@ class CustomVotingClassifier:
             name = os.path.basename(model_file).strip('.joblib')
             model = joblib.load(model_file)
             models[name] = model
+
+        heuristic_model = Heuristic()
+        models['heuristic_model'] = heuristic_model
         return models
 
     def predict(self, X):
