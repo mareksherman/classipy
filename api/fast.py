@@ -3,11 +3,8 @@ from fastapi import Request
 from fastapi.middleware.cors import CORSMiddleware
 
 import pandas as pd
-import joblib
-from classipy.models.heuristic import Heuristic
 from classipy.transformers.json_to_model_transformer import JSONtoModelTransformer
 from classipy.models.voting_classifier import CustomVotingClassifier
-import json
 
 app = FastAPI()
 
@@ -33,7 +30,7 @@ async def summary_predict(info: Request):
     X = JSONtoModelTransformer().fit_transform(user_data_df)
 
     #Feed Model Ready Dataframe to Predictor
-    custom_voting_classifier = CustomVotingClassifier()
+    custom_voting_classifier = CustomVotingClassifier(user_data_df)
     y_preds = custom_voting_classifier.predict(X)
 
     #Return JSON with ColumnNames and Predictions
@@ -41,13 +38,6 @@ async def summary_predict(info: Request):
                            'y_preds_decoded': y_preds
                                 }).to_json()
 
-    #Get heusristic prediction
-    #heuristic_model = Heuristic()
-    #heuristic_pred = heuristic_model.test_dataset_heuristic(user_data_df)
-    #heuristic_pred = pd.DataFrame(heuristic_pred)
-    #heuristic_pred = pd.DataFrame.to_json(heuristic_pred)
-
-    #return heuristic_pred
     return y_preds_as_json
 
 

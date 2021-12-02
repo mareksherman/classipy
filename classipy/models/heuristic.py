@@ -21,17 +21,19 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 
 class Heuristic(BaseEstimator, ClassifierMixin):
 
-    def __init__(self, demo_param='demo'):
-        self.demo_param = demo_param
+    def __init__(self,user_data):
+        self.user_data = user_data
 
     def fit(self,df,y):
         return self
 
+    #Doesn´t predict on tranformed X, instead predicts on df the user provided
+    #importing data from the api
     def predict(self,df):
-        return self.test_dataset_heuristic(self,df)
+        return self.test_dataset_heuristic(self,self.user_data)
 
     def predict_proba(self,df):
-        return 1
+        return 1/7
 
     #Fill None with nan
     def fill_nan_none(self,df):
