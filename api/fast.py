@@ -7,6 +7,7 @@ import joblib
 from classipy.models.heuristic import Heuristic
 from classipy.transformers.json_to_model_transformer import JSONtoModelTransformer
 from classipy.models.voting_classifier import CustomVotingClassifier
+import json
 
 app = FastAPI()
 
@@ -37,27 +38,18 @@ async def summary_predict(info: Request):
 
     #Return JSON with ColumnNames and Predictions
     y_preds_as_json = pd.DataFrame({'column_names':user_data_df['column_name'],
-                            'y_preds_decoded': y_preds
+                           'y_preds_decoded': y_preds
                                 }).to_json()
 
     #Get heusristic prediction
     #heuristic_model = Heuristic()
     #heuristic_pred = heuristic_model.test_dataset_heuristic(user_data_df)
-    #heuristic_pred = heuristic_pred.to_frame()
+    #heuristic_pred = pd.DataFrame(heuristic_pred)
     #heuristic_pred = pd.DataFrame.to_json(heuristic_pred)
-    #heuristic_pred = pd.DataFrame.to_json(user_data_df)
 
-    #Get model prediction pipeline
-    #pipeline = joblib.load('models.model')
-    #Predict columns with models
-    #model_pred = pipeline.predict(X)
-
-    #Build result data frame by evaluating which pred is better (heuristic or model)
-    #result_df =
-    #for every row in heuristiv_pred and model_pred
-
-
+    #return heuristic_pred
     return y_preds_as_json
+
 
 @app.get("/transform")
 def transform():
